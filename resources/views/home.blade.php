@@ -9,13 +9,6 @@
 <body>
     <h1>Hola Mundo Laravel!</h1>
     <p>Desde el HOME</p>
-    <?php foreach($arreglo as $obj){ ?>
-        <div class="card">
-            <div class="card-body">
-                <?php echo $obj->objeto->nombre; ?>
-            </div>
-        </div>
-    <?php } ?>
     <h3>{{$arreglo}}</h3>
 </body>
 </html>
