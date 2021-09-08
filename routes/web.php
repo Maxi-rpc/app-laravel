@@ -22,6 +22,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 // Routes Post
+Route::get('/post', 'PostController@index');
 Route::get('/post/create', 'PostController@create');
 Route::post('/post/store', 'PostController@store');
 
