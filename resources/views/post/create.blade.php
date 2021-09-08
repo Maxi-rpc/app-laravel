@@ -1,5 +1,12 @@
 @extends('layouts.app')
 @section('content')
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-6 text-center">
+            <h2>Crear nuevo Post</h2>
+        </div>
+    </div>
+
     @if(session()->has('message'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{ session()->get('message') }}
@@ -8,6 +15,7 @@
             </button>
         </div>
     @endif
+
     <div class="row justify-content-center mt-5">
         <div class="col-6">
             <form action="{{url('post/store')}}" method="POST">
@@ -21,7 +29,8 @@
                     <label for="">Body</label>
                     <textarea type="text" class="form-control" name="body" rows="4"></textarea>
                 </div>
-                <button type="submit" class="btn btn-sm btn-outline btn-primary">Submit</button>
+                <button type="submit" class="btn btn-sm btn-primary">Aceptar</button>
+                <a href="javascript:history.back()" class="btn btn-sm btn-danger">Cancelar</a>
             </form>
         </div>
     </div>
