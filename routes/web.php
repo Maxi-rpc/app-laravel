@@ -25,5 +25,6 @@ Route::get('/dashboard', function () {
 Route::get('/post', 'PostController@index');
 Route::get('/post/create', 'PostController@create');
 Route::post('/post/store', 'PostController@store');
+Route::post('/post/destroy', 'PostController@destroy');
 
 require __DIR__.'/auth.php';
